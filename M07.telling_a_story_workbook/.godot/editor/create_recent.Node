@@ -1,5 +1,8 @@
-AudioStreamPlayer
 Button
+HBoxContainer
+BoxContainer
+VBoxContainer
+AudioStreamPlayer
 RichTextLabel
 TextureRect
 ColorRect
