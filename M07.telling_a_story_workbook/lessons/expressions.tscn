@@ -23,7 +23,6 @@ grow_vertical = 2
 theme = ExtResource("1_offqj")
 
 [node name="Background" type="ColorRect" parent="."]
-visible = false
 material = SubResource("ShaderMaterial_6cfwb")
 layout_mode = 1
 anchors_preset = 15
@@ -62,6 +61,7 @@ stretch_mode = 5
 layout_mode = 0
 offset_right = 649.0
 offset_bottom = 321.0
+metadata/_edit_group_ = true
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
 layout_mode = 2
