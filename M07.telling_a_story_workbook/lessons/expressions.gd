@@ -11,11 +11,11 @@ var expressions := {
 }
 @onready var body: TextureRect = %Body
 @onready var expression: TextureRect = %Expression
-@onready var button_sophia: Button = %ButtonSophia
-@onready var button_pink: Button = %ButtonPink
-@onready var button_regular: Button = %ButtonRegular
-@onready var button_sad: Button = %ButtonSad
-@onready var button_happy: Button = %ButtonHappy
+@onready var button_sophia: Button = %Sophia
+@onready var button_pink: Button = %Pink
+@onready var button_regular: Button = %Regular
+@onready var button_sad: Button = %Sad
+@onready var button_happy: Button = %Happy
 
 
 # Called when the node enters the scene tree for the first time.

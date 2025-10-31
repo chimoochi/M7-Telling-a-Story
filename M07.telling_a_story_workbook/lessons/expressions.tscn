@@ -36,13 +36,11 @@ grow_vertical = 2
 [node name="Body" type="TextureRect" parent="."]
 unique_name_in_owner = true
 layout_mode = 1
-anchors_preset = 2
-anchor_top = 1.0
+anchors_preset = 15
+anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -634.0
-offset_right = 512.0
-offset_bottom = 6.0
-grow_vertical = 0
+grow_horizontal = 2
+grow_vertical = 2
 texture = ExtResource("5_8k2r0")
 expand_mode = 1
 stretch_mode = 5
@@ -72,35 +70,37 @@ metadata/_edit_group_ = true
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
 layout_mode = 2
 
-[node name="Button" type="Button" parent="VBoxContainer/HBoxContainer"]
+[node name="Sophia" type="Button" parent="VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("1_offqj")
+text = "Sophia
+"
+
+[node name="Pink" type="Button" parent="VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("1_offqj")
+text = "Pink
+"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Regular" type="Button" parent="VBoxContainer/HBoxContainer2"]
 unique_name_in_owner = true
 layout_mode = 2
 theme = ExtResource("1_offqj")
 text = "Regular"
 
-[node name="Button2" type="Button" parent="VBoxContainer/HBoxContainer"]
+[node name="Sad" type="Button" parent="VBoxContainer/HBoxContainer2"]
 unique_name_in_owner = true
 layout_mode = 2
 theme = ExtResource("1_offqj")
 text = "Sad"
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer"]
-layout_mode = 2
-
-[node name="Button3" type="Button" parent="VBoxContainer/HBoxContainer2"]
+[node name="Happy" type="Button" parent="VBoxContainer/HBoxContainer2"]
 unique_name_in_owner = true
 layout_mode = 2
 theme = ExtResource("1_offqj")
-text = "Joy"
-
-[node name="Button4" type="Button" parent="VBoxContainer/HBoxContainer2"]
-unique_name_in_owner = true
-layout_mode = 2
-theme = ExtResource("1_offqj")
-text = "Angry"
-
-[node name="Button5" type="Button" parent="VBoxContainer/HBoxContainer2"]
-unique_name_in_owner = true
-layout_mode = 2
-theme = ExtResource("1_offqj")
-text = "Surprised"
+text = "Happy"
