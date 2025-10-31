@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://c5hks0yvn11s4"]
+[gd_scene load_steps=8 format=3 uid="uid://c5hks0yvn11s4"]
 
 [ext_resource type="Theme" uid="uid://wkct8cqvt2o2" path="res://lessons/main_theme.tres" id="1_offqj"]
+[ext_resource type="Script" uid="uid://82wbh6kijyve" path="res://lessons/expressions.gd" id="2_uassf"]
 [ext_resource type="Shader" uid="uid://cs15e2hgd2lan" path="res://assets/sliding_background.gdshader" id="3_2l66d"]
 [ext_resource type="Texture2D" uid="uid://bnly1gkbxw6b5" path="res://assets/bubble_pattern.png" id="4_8poul"]
 [ext_resource type="Texture2D" uid="uid://copkt78vgp37i" path="res://assets/sophia.png" id="5_8k2r0"]
@@ -21,6 +22,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_offqj")
+script = ExtResource("2_uassf")
 
 [node name="Background" type="ColorRect" parent="."]
 material = SubResource("ShaderMaterial_6cfwb")
@@ -32,6 +34,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Body" type="TextureRect" parent="."]
+unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
@@ -45,6 +48,7 @@ expand_mode = 1
 stretch_mode = 5
 
 [node name="Expression" type="TextureRect" parent="Body"]
+unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0
@@ -59,19 +63,23 @@ stretch_mode = 5
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 0
-offset_right = 649.0
-offset_bottom = 321.0
+offset_left = 14.0
+offset_top = 15.0
+offset_right = 449.0
+offset_bottom = 336.0
 metadata/_edit_group_ = true
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
 layout_mode = 2
 
 [node name="Button" type="Button" parent="VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 theme = ExtResource("1_offqj")
 text = "Regular"
 
 [node name="Button2" type="Button" parent="VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 theme = ExtResource("1_offqj")
 text = "Sad"
@@ -80,16 +88,19 @@ text = "Sad"
 layout_mode = 2
 
 [node name="Button3" type="Button" parent="VBoxContainer/HBoxContainer2"]
+unique_name_in_owner = true
 layout_mode = 2
 theme = ExtResource("1_offqj")
 text = "Joy"
 
 [node name="Button4" type="Button" parent="VBoxContainer/HBoxContainer2"]
+unique_name_in_owner = true
 layout_mode = 2
 theme = ExtResource("1_offqj")
 text = "Angry"
 
 [node name="Button5" type="Button" parent="VBoxContainer/HBoxContainer2"]
+unique_name_in_owner = true
 layout_mode = 2
 theme = ExtResource("1_offqj")
 text = "Surprised"
