@@ -9,26 +9,36 @@ var expressions := {
 	"regular": preload("res://assets/emotion_regular.png"),
 	"sad": preload("res://assets/emotion_sad.png"),
 }
+
+@onready var row_bodies: HBoxContainer =  $VBoxContainer/RowBodies
+@onready var row_expressions: HBoxContainer = $VBoxContainer/RowExpressions
+
 @onready var body: TextureRect = %Body
 @onready var expression: TextureRect = %Expression
-@onready var button_sophia: Button = %Sophia
-@onready var button_pink: Button = %Pink
-@onready var button_regular: Button = %Regular
-@onready var button_sad: Button = %Sad
-@onready var button_happy: Button = %Happy
 
 
+	
+func create_buttons() -> void:
+	for current_body: String in bodies:
+		var button := Button.new()
+		row_bodies.add_child(button)
+		button.text = current_body.capitalize()
+		button.pressed.connect(func() -> void:
+			body.texture = bodies[current_body]
+		)
+	for current_expression: String in expressions:
+		var button := Button.new()
+		row_expressions.add_child(button)
+		button.text = current_expression.capitalize()
+		button.pressed.connect(func() -> void:
+			expression.texture = expressions[current_expression]
+		)
+		
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	body.texture = bodies['pink']
-	expression.texture = expressions['happy']
-	button_sophia.pressed.connect(func(): body.texture = bodies["sophia"])
-	button_pink.pressed.connect(func(): body.texture = bodies["pink"])
-	button_regular.pressed.connect(func(): expression.texture = expressions["regular"])
-	button_sad.pressed.connect(func(): expression.texture = expressions["sad"])
-	button_happy.pressed.connect(func(): expression.texture = expressions["happy"])
-
+	create_buttons()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
+	

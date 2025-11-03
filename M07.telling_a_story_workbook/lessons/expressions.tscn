@@ -67,40 +67,8 @@ offset_right = 449.0
 offset_bottom = 336.0
 metadata/_edit_group_ = true
 
-[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+[node name="RowBodies" type="HBoxContainer" parent="VBoxContainer"]
 layout_mode = 2
 
-[node name="Sophia" type="Button" parent="VBoxContainer/HBoxContainer"]
-unique_name_in_owner = true
+[node name="RowExpressions" type="HBoxContainer" parent="VBoxContainer"]
 layout_mode = 2
-theme = ExtResource("1_offqj")
-text = "Sophia
-"
-
-[node name="Pink" type="Button" parent="VBoxContainer/HBoxContainer"]
-unique_name_in_owner = true
-layout_mode = 2
-theme = ExtResource("1_offqj")
-text = "Pink
-"
-
-[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer"]
-layout_mode = 2
-
-[node name="Regular" type="Button" parent="VBoxContainer/HBoxContainer2"]
-unique_name_in_owner = true
-layout_mode = 2
-theme = ExtResource("1_offqj")
-text = "Regular"
-
-[node name="Sad" type="Button" parent="VBoxContainer/HBoxContainer2"]
-unique_name_in_owner = true
-layout_mode = 2
-theme = ExtResource("1_offqj")
-text = "Sad"
-
-[node name="Happy" type="Button" parent="VBoxContainer/HBoxContainer2"]
-unique_name_in_owner = true
-layout_mode = 2
-theme = ExtResource("1_offqj")
-text = "Happy"
