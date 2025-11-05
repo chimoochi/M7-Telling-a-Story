@@ -19,12 +19,12 @@ var expressions := {
 var dialogue_items : Array[Dictionary] = [
 	{
 		"expression": expressions["regular"],
-		"text": "the starting text",
+		"text": "the [tornado freq=3.0][rainbow val=1.0]starting[/rainbow][/tornado] text",
 		"character": bodies["sophia"],
 	},
 	{
 		"expression": expressions["sad"],
-		"text": "other text abotu something",
+		"text": "other text about [shake]something[/shake]",
 		"character": bodies["pink"],
 	},
 	{
@@ -72,6 +72,7 @@ func show_text():
 	var sound_start_position := randf() * sound_max_offset
 	audio_stream_player.play(sound_start_position)
 	tween.finished.connect(audio_stream_player.stop)
+	
 	next_button.disabled = true
 	tween.finished.connect(func() -> void:
 		next_button.disabled = false
