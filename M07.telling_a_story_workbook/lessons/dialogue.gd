@@ -5,6 +5,11 @@ extends Control
 @onready var body: TextureRect = %Body
 @onready var expression: TextureRect = %Expression
 
+var bodies := {
+	"sophia": preload("res://assets/sophia.png"),
+	"pink": preload("res://assets/pink.png")
+}
+
 var expressions := {
 	"happy": preload("res://assets/emotion_happy.png"),
 	"regular": preload("res://assets/emotion_regular.png"),
@@ -15,22 +20,27 @@ var dialogue_items : Array[Dictionary] = [
 	{
 		"expression": expressions["regular"],
 		"text": "the starting text",
+		"character": bodies["sophia"],
 	},
 	{
 		"expression": expressions["sad"],
 		"text": "other text abotu something",
+		"character": bodies["pink"],
 	},
 	{
 		"expression": expressions["happy"],
 		"text": "a piece of data in a dictionary",
+		"character": bodies["sophia"],
 	},
 	{
 		"expression": expressions["regular"],
 		"text": "almost the end",
+		"character": bodies["pink"],
 	},
 	{
 		"expression": expressions["happy"],
 		"text": "the end",
+		"character": bodies["sophia"],
 	}
 ]
 
@@ -53,9 +63,9 @@ func show_text():
 	rich_text_label.text = current_item["text"]
 	expression.texture = current_item["expression"]
 	rich_text_label.visible_ratio = 0.0
-	
+	body.texture = current_item["character"]
 	var tween := create_tween()
-	var text_appearing_duration := 1.2
+	var text_appearing_duration: float = current_item["text"].length() / 30.0
 	tween.tween_property(rich_text_label, "visible_ratio", 1.0, text_appearing_duration)
 	
 	var sound_max_offset := audio_stream_player.stream.get_length() - text_appearing_duration
